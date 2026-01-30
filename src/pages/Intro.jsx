@@ -1,6 +1,6 @@
 import React from 'react'
 import ArticleCard from '../components/ArticleCard'
-import logo from '../assets/images/Logo.jpg'
+import logo from '../assets/images/logo.jpg'
 export default function Intro() {
   return (
     <div>
