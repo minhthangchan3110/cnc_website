@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Về Xưởng Gia Công CNC - Đơn Vị Trẻ Đầy Nhiệt Huyết</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066CC;
+            --secondary: #FF6B00;
+            --dark: #1a1a2e;
+            --text: #333333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --gray: #6c757d;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* Header */
+        .top-bar {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 5%;
+            font-size: 0.9rem;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 5%;
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Article */
+        .article {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            padding: 0 5%;
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-image {
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--light-bg), #e8eef5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text);
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 2.5rem 0 1.2rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.8rem;
+        }
+
+        .article-content strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .stats-inline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 3rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 100px;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            margin: 0;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .related-articles h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .related-image {
+            height: 150px;
+            background: linear-gradient(135deg, var(--light-bg), #e8eef5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .related-content {
+            padding: 1.2rem;
+        }
+
+        .related-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .related-date {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 5% 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            opacity: 0.8;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .top-bar-content {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .article-title {
+                font-size: 1.8rem;
+            }
+
+            .stats-inline,
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="contact-info">
+                <span>📞 0912 345 678</span>
+                <span>✉️ lienhe@giacongcnc.vn</span>
+            </div>
+            <div>
+                <span>⏰ Thứ 2 - Thứ 7: 7:00 - 18:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-img">⚙️</div>
+                <div class="logo-text">
+                    <h1>GIA CÔNG CNC</h1>
+                    <p>Chính xác - Uy tín - Chuyên nghiệp</p>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html">Sản phẩm</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <span>/</span>
+        <span>Bài viết</span>
+    </div>
+
+    <!-- Article -->
+    <article class="article">
+        <div class="article-header">
+            <span class="article-badge">Giới thiệu</span>
+            <h1 class="article-title">Giới Thiệu Về Xưởng Gia Công CNC - Đơn Vị Trẻ Đầy Nhiệt Huyết</h1>
+            <div class="article-meta">
+                <span>📅 20/12/2025</span>
+                <span>👁️ 892 lượt xem</span>
+                <span>✍️ Admin</span>
+            </div>
+        </div>
+
+        <div class="article-image">
+            <div class="image-placeholder">🏭</div>
+        </div>
+
+        <div class="article-content">
+            <p>Trong thời đại công nghiệp 4.0 hiện nay, việc tìm kiếm một đơn vị gia công cơ khí uy tín, chất lượng cao là nhu cầu thiết yếu của nhiều doanh nghiệp. Mặc dù mới thành lập năm 2023, nhưng với đội ngũ kỹ thuật viên giàu kinh nghiệm và trang thiết bị hiện đại, chúng tôi đã nhanh chóng khẳng định được vị thế trong ngành gia công cơ khí.</p>
+
+            <h2>Chúng Tôi Là Ai?</h2>
+            
+            <p>Xưởng Gia Công CNC được thành lập vào đầu năm 2023 tại Hà Nội bởi một nhóm kỹ sư trẻ có đam mê và kinh nghiệm lâu năm trong lĩnh vực gia công cơ khí. Nhận thấy nhu cầu ngày càng cao về dịch vụ gia công CNC chất lượng với giá cả hợp lý, chúng tôi quyết định khởi nghiệp với mục tiêu mang đến cho khách hàng những sản phẩm chính xác nhất, dịch vụ tốt nhất.</p>
+
+            <p>Từ những ngày đầu khiêm tốn với 2 máy CNC và 5 nhân viên, chúng tôi đã nhanh chóng phát triển nhờ sự tín nhiệm của khách hàng. Hiện tại, xưởng của chúng tôi đã mở rộng lên diện tích 300m² với 5 máy CNC hiện đại nhập khẩu từ Nhật Bản và Đài Loan, cùng đội ngũ 12 kỹ thuật viên tay nghề cao.</p>
+
+            <div class="stats-inline">
+                <div class="stat-box">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Năm hoạt động</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Khách hàng tin dùng</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">800+</div>
+                    <div class="stat-label">Sản phẩm hoàn thành</div>
+                </div>
+            </div>
+
+            <h2>Hành Trình Phát Triển</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h4>Khởi đầu đầy hứa hẹn</h4>
+                        <p>Thành lập xưởng vào tháng 3/2023 với 2 máy CNC và 5 nhân viên. Tập trung xây dựng chất lượng và uy tín từ những đơn hàng đầu tiên.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h4>Mở rộng nhanh chóng</h4>
+                        <p>Đầu tư thêm 2 máy CNC mới và tuyển dụng thêm 4 kỹ thuật viên. Số lượng khách hàng tăng trưởng ổn định, nhiều khách hàng quay lại đặt hàng lần 2, 3.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>Nâng cấp công nghệ</h4>
+                        <p>Chuyển sang xưởng rộng hơn (300m²), đầu tư thêm máy CNC 4 trục hiện đại. Bắt đầu nhận các đơn hàng lớn từ các doanh nghiệp sản xuất.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h4>Tiếp tục phát triển</h4>
+                        <p>Hiện tại với 5 máy CNC, 12 nhân viên và hơn 150 khách hàng tin dùng. Mục tiêu tiếp tục mở rộng quy mô và nâng cao chất lượng dịch vụ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Trang Thiết Bị & Công Nghệ</h2>
+
+            <p>Dù là đơn vị trẻ, nhưng chúng tôi không ngại đầu tư vào máy móc và công nghệ để đảm bảo chất lượng sản phẩm:</p>
+
+            <ul>
+                <li><strong>5 máy CNC 3-4 trục:</strong> Nhập khẩu từ Nhật Bản và Đài Loan, đảm bảo độ chính xác cao đến 0.01mm</li>
+                <li><strong>Hệ thống đo lường hiện đại:</strong> Thước cặp điện tử, panme vi mét chính xác để kiểm tra sản phẩm</li>
+                <li><strong>Phần mềm CAD/CAM:</strong> SolidWorks, Fusion 360 giúp thiết kế và lập trình gia công nhanh chóng</li>
+                <li><strong>Thiết bị hỗ trợ:</strong> Máy đánh bóng, máy cắt, máy khoan để hoàn thiện sản phẩm</li>
+            </ul>
+
+            <h2>Đội Ngũ Nhân Sự</h2>
+
+            <p>Điểm mạnh của chúng tôi chính là đội ngũ nhân sự trẻ, năng động nhưng giàu kinh nghiệm:</p>
+
+            <ul>
+                <li><strong>Đội ngũ sáng lập:</strong> Các kỹ sư có 8-10 năm kinh nghiệm làm việc tại các xưởng CNC lớn</li>
+                <li><strong>Kỹ thuật viên:</strong> Được tuyển chọn kỹ càng, có bằng cấp chuyên môn và kinh nghiệm thực tế 3-7 năm</li>
+                <li><strong>Đào tạo liên tục:</strong> Thường xuyên cập nhật kỹ thuật mới, học hỏi kinh nghiệm từ các chuyên gia</li>
+                <li><strong>Tinh thần làm việc:</strong> Trẻ trung, năng động, sẵn sàng làm việc linh hoạt để đáp ứng yêu cầu khách hàng</li>
+            </ul>
+
+            <h2>Cam Kết Của Chúng Tôi</h2>
+
+            <div class="highlight-box">
+                <p><strong>🎯 Chất lượng:</strong> Dù là đơn vị mới nhưng chúng tôi cam kết chất lượng như các xưởng lâu năm. Kiểm tra kỹ từng sản phẩm trước khi giao.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>⏰ Tiến độ:</strong> Làm việc nghiêm túc, giao hàng đúng hẹn. Sẵn sàng làm thêm giờ để đảm bảo tiến độ cho khách hàng.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>💰 Giá cả:</strong> Giá cả cạnh tranh, phù hợp với cả khách hàng cá nhân và doanh nghiệp. Báo giá rõ ràng, minh bạch.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>🤝 Hỗ trợ:</strong> Tư vấn nhiệt tình, hỗ trợ thiết kế miễn phí. Luôn lắng nghe và đưa ra giải pháp tối ưu nhất.</p>
+            </div>
+
+            <h2>Tại Sao Chọn Chúng Tôi?</h2>
+
+            <p>Là một đơn vị trẻ, chúng tôi hiểu rằng phải nỗ lực gấp đôi để được khách hàng tin tưởng. Vì vậy:</p>
+
+            <ul>
+                <li><strong>Chất lượng là ưu tiên số 1:</strong> Mỗi sản phẩm là cơ hội để chúng tôi khẳng định năng lực</li>
+                <li><strong>Linh hoạt và nhanh chóng:</strong> Không bị ràng buộc bởi quy trình cứng nhắc, sẵn sàng đáp ứng yêu cầu đặc biệt</li>
+                <li><strong>Giá cả hợp lý:</strong> Chi phí vận hành thấp giúp chúng tôi đưa ra mức giá tốt hơn</li>
+                <li><strong>Tận tâm với khách hàng:</strong> Xem mỗi khách hàng như đối tác lâu dài, luôn cố gắng làm hài lòng</li>
+                <li><strong>Đầu tư công nghệ:</strong> Không ngại chi tiền cho máy móc hiện đại để nâng cao chất lượng</li>
+            </ul>
+
+            <p>Dù mới hoạt động 3 năm, nhưng với tinh thần học hỏi, không ngừng cải tiến và đặt khách hàng lên hàng đầu, chúng tôi tin rằng sẽ ngày càng phát triển và trở thành đối tác tin cậy của bạn.</p>
+
+            <div class="highlight-box">
+                <p><strong>📞 Liên hệ ngay với chúng tôi:</strong></p>
+                <p>☎️ Hotline: 0912 345 678<br>
+                ✉️ Email: lienhe@giacongcnc.vn<br>
+                📍 Địa chỉ: Cầu Giấy, Hà Nội</p>
+                <p>Chúng tôi luôn sẵn sàng tư vấn và báo giá miễn phí cho mọi dự án của bạn!</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <h2>Bài Viết Liên Quan</h2>
+        <div class="related-grid">
+            <a href="bai-viet-1.html" class="related-card">
+                <div class="related-image">📝</div>
+                <div class="related-content">
+                    <h4>Ưu Điểm Vượt Trội Của Công Nghệ Tiện CNC</h4>
+                    <span class="related-date">15/01/2026</span>
+                </div>
+            </a>
+            <a href="bai-viet-2.html" class="related-card">
+                <div class="related-image">🔧</div>
+                <div class="related-content">
+                    <h4>Quy Trình Kiểm Soát Chất Lượng Nghiêm Ngặt</h4>
+                    <span class="related-date">10/01/2026</span>
+                </div>
+            </a>
+            <a href="bai-viet-3.html" class="related-card">
+                <div class="related-image">💡</div>
+                <div class="related-content">
+                    <h4>Cách Chọn Vật Liệu Phù Hợp Cho Sản Phẩm CNC</h4>
+                    <span class="related-date">05/01/2026</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Xưởng Gia Công CNC</h3>
+                <p>Chuyên gia công cơ khí tiện CNC chính xác, uy tín hàng đầu tại Hà Nội. Cam kết chất lượng và dịch vụ tốt nhất cho khách hàng.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sản phẩm</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Trục cơ khí</a></li>
+                    <li><a href="#">Bánh răng - Puly</a></li>
+                    <li><a href="#">Bu lông - Ốc vít</a></li>
+                    <li><a href="#">Chi tiết ô tô</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Liên kết</h3>
+                <ul class="footer-links">
+                    <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li><a href="san-pham.html">Sản phẩm</a></li>
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Giờ làm việc</h3>
+                <p>Thứ 2 - Thứ 6: 7:00 - 18:00<br>
+                Thứ 7: 7:00 - 15:00<br>
+                Chủ nhật: Nghỉ</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Xưởng Gia Công CNC. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>
