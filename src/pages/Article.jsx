@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/Logo.jpg'
+import logo from '../assets/images/logo.jpg'
 import { FaPhone } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { CiMap } from "react-icons/ci";
