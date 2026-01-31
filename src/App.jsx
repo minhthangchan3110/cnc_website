@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Intro from './pages/Intro';
 import Layout from './Layout';
 import Article from './pages/Article';
+import Products from './pages/Products';
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Home/>}/>
           <Route path='Intro' element={<Intro/>}/>
           <Route path='IntroDetails' element={<Article/>}/>
+          <Route path='Products' element={<Products/>}/>
         </Route>
       </Routes>
     </Router>)
