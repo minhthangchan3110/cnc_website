@@ -21,7 +21,7 @@ export default function Header() {
                 <li><Link to="/" className="hover:text-[#0066CC] duration-300">
                   Trang chủ
                 </Link></li>
-                <li><Link to="/Giới thiệu" className="hover:text-[#0066CC] duration-300">
+                <li><Link to="/Intro" className="hover:text-[#0066CC] duration-300">
                   Giới thiệu
                 </Link></li>
                 <li><a href="#why-us" className='hover:text-[#0066CC] duration-300'>Sản phẩm</a></li>
