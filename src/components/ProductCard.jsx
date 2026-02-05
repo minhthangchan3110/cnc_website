@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export default function ({ icon, badge, category, name }) {
+export default function ProductCard ({ icon, badge, category, name }) {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:-translate-y-1 hover:border-[#0066CC] hover:shadow-lg hover:shadow-blue-100">
       
@@ -29,7 +31,7 @@ export default function ({ icon, badge, category, name }) {
           {name}
         </h3>
 
-        <button className="mt-auto rounded-md bg-[#0066CC] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#0052a3]">
+        <button onClick={() => navigate('/ProductDetail')} className="hover:cursor-pointer mt-auto rounded-md bg-[#0066CC] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#0052a3]">
           Xem chi tiết
         </button>
       </div>

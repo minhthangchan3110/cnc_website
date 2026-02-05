@@ -1,7 +1,6 @@
 import React from 'react'
 import SidebarProduct from '../components/SidebarProduct'
 import ProductCard from '../components/ProductCard'
-import sp1 from '../assets/images/sp-phay-cnc-6.jpg'
 import ProductList from '../components/ProductList'
 export default function Products() {
   return (
